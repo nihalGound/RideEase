@@ -1,6 +1,14 @@
+import { ImageSourcePropType } from "react-native";
 import Images from "../utils/images";
 
-export const slides = [
+export type slide = {
+  id: number;
+  image: ImageSourcePropType;
+  text: string;
+  description: string;
+};
+
+export const slides:slide[] = [
   {
     id: 0,
     image: Images.destination,
