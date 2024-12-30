@@ -120,7 +120,7 @@ export default function RidePlanScreen() {
   }, []);
 
   const initialiseWebSocket = () => {
-    ws.current = new WebSocket("ws://localhost:8080");
+    ws.current = new WebSocket("ws://192.168.147.2:8080");
     ws.current.onopen = () => {
       console.log("Connected to websocket server");
       setWsConnected(true);
