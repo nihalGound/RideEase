@@ -11,6 +11,8 @@ const Button: React.FC<ButtonProps> = ({
   width,
   backgroundColor,
   textColor,
+  disabled,
+  height,
 }) => {
   const widthNumber = width || "100%";
   return (
@@ -20,9 +22,11 @@ const Button: React.FC<ButtonProps> = ({
         {
           width: widthNumber,
           backgroundColor: backgroundColor || color.buttonBg,
+          height: height,
         },
       ]}
       onPress={onPress}
+      disabled={disabled}
     >
       <Text
         style={[
